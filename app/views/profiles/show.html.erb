@@ -1,0 +1,23 @@
+<h2>Profile Listing</h2>
+
+
+<table class="table table-condensed">
+	<tr>
+		<th>Name</th>
+		<td><%= @profile.name %></td>
+		
+	</tr>
+	
+	<tr>
+		<th>Bitrate</th>
+		<td><%= @profile.bitrate %></td>
+	</tr>		
+	
+	<tr>
+		<th>Codec</th>
+		<td><%= @profile.codec %></td>	
+	</tr>	
+
+</table>
+
+<%= link_to 'Back', profiles_path %>

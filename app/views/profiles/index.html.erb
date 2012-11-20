@@ -1,0 +1,37 @@
+<h2>Profiles Listing</h2>
+
+
+<div class="row">
+  <aside class="span4">
+    <section>
+	<form>
+	    <%= form_tag(profiles_path, :method => "get") do %>
+		<%= label_tag(:q, "Name:")%>
+		<%= text_field_tag(:q) %>
+		<%= label_tag(:q2, "Codec:")%>
+		<%= text_field_tag(:q2) %>
+		<%= submit_tag("Search")%>
+	<% end %>
+	</form>		 
+   </section>	
+  </aside>
+<div class="span8">
+  <table class="table table-striped">
+	<tr>
+		<th>Name</th>
+		<th>Bitrate</th>
+		<th>Codec</th>
+	</tr>
+	
+	<% @profiles.each do |profile|%>
+		<tr>
+			<td><%= link_to profile.name, profile %></td>
+			<td><%= profile.bitrate %></td>
+			<td><%= profile.codec %></td>
+		</tr>		
+	<% end %>
+	
+</table>		
+  </div>
+
+</div>	
