@@ -6,11 +6,12 @@
     <section>
 	<form>
 	    <%= form_tag(profiles_path, :method => "get") do %>
-		<%= label_tag(:q, "Name:")%>
-		<%= text_field_tag(:q) %>
-		<%= label_tag(:q2, "Codec:")%>
-		<%= text_field_tag(:q2) %>
-		<%= submit_tag("Search")%>
+		<%= label_tag("Name:")%>
+	    <%= text_field_tag :name, params[:name] %>		
+		<%= label_tag("Codec:")%>
+	    <%= text_field_tag :codec, params[:codec] %>		
+		<br>
+		<%= submit_tag("Submit")%>
 	<% end %>
 	</form>		 
    </section>	

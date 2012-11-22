@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   def index
-    @profiles = Profile.search(params[:q])
+    @profiles = Profile.search(params[:name])
     
     respond_to do |format|
       format.html #index.html.erb
