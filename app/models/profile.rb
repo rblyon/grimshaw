@@ -14,7 +14,7 @@
 #
 
 class Profile < ActiveRecord::Base
-  attr_accessible :bitrate, :codec, :container, :fullname, :level, :name
+  attr_accessible :name, :bitrate, :codec, :map_pid, :map_revision, :description, :format, :framerate, :height, :asset_type, :mime_type, :video_bitrate, :video_mode, :width, :audio_bitrate, :audio_codec, :audio_mode, :map_link, :video_bitrate_mode
 
   def self.search(search)
     

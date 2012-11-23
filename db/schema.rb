@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123113214) do
+ActiveRecord::Schema.define(:version => 20121123151925) do
 
   create_table "profiles", :force => true do |t|
     t.string   "name"
     t.integer  "bitrate"
     t.string   "codec"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "map_pid"
     t.integer  "map_revision"
     t.text     "description"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20121123113214) do
     t.string   "audio_codec"
     t.string   "audio_mode"
     t.string   "map_link"
+    t.string   "video_bitrate_mode"
   end
 
 end
