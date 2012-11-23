@@ -4,16 +4,7 @@
 <div class="row">
   <aside class="span4">
     <section>
-	<form>
-	    <%= form_tag(profiles_path, :method => "get") do %>
-		<%= label_tag("Name:")%>
-	    <%= text_field_tag :name, params[:name] %>		
-		<%= label_tag("Codec:")%>
-	    <%= text_field_tag :codec, params[:codec] %>		
-		<br>
-		<%= submit_tag("Submit")%>
-	<% end %>
-	</form>		 
+	    <%= render 'profiles/search_form' %>
    </section>	
   </aside>
 <div class="span8">

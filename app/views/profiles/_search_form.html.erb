@@ -1,6 +1,14 @@
-<% form_tag profiles_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+<form>
+    <%= form_tag(profiles_path, :method => "get") do %>
+	<%= label_tag("Name:")%>
+    <%= text_field_tag :name, params[:name] %>		
+	<%= label_tag("Codec:")%>
+    <%= text_field_tag :codec, params[:codec] %>
+	<%= label_tag("Bitrates higher than:")%>
+    <%= text_field_tag :bitratelow, params[:bitratelow] %>
+	<%= label_tag("Bitrates lower than:")%>
+    <%= text_field_tag :bitratehigh, params[:bitratehigh] %>		
+	<br>
+	<%= submit_tag("Search")%>
 <% end %>
+</form>	
