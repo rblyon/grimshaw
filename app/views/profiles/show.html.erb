@@ -1,22 +1,111 @@
-<h2>Profile Listing</h2>
+<h2>Profile Details for <%= @profile.name %></h2>
 
 
 <table class="table table-condensed">
+	
+	
 	<tr>
-		<th>Name</th>
-		<td><%= @profile.name %></td>
+		<th>PID</th>
+		<td><%= link_to @profile.map_pid, @profile.map_link %></td>
+		
+	</tr>
+	
+	
+	<tr>
+		<th>Description</th>
+		<td><%= @profile.description %></td>
+	</tr>
+	
+	<tr>
+		<th>Type</th>
+		<td><%= @profile.asset_type %></td>
 		
 	</tr>
 	
 	<tr>
-		<th>Bitrate</th>
-		<td><%= @profile.bitrate %></td>
+		<th>Video Mode</th>
+		<td><%= @profile.video_mode %></td>
+		
 	</tr>		
+	
+	<tr>
+		<th>Total Bitrate</th>
+		<td><%= @profile.bitrate %></td>
+		
+	</tr>
+	
+	<tr>
+		<th>Audio Bitrate</th>
+		<td><%= @profile.audio_bitrate %></td>
+		
+	</tr>
+	
+	
 	
 	<tr>
 		<th>Codec</th>
 		<td><%= @profile.codec %></td>	
+	</tr>
+	
+	<tr>
+		<th>Audio Codec</th>
+		<td><%= @profile.audio_codec %></td>
+		
+	</tr>
+	
+	
+	<tr>
+		<th>Audio Mode</th>
+		<td><%= @profile.audio_mode %></td>
+		
+	</tr>
+
+	
+	
+	<tr>
+		<th>Revision</th>
+		<td><%= @profile.map_revision %></td>
+		
+	</tr>
+	
+	
+	<tr>
+		<th>Format</th>
+		<td><%= @profile.format %></td>
+		
+	</tr>
+	
+	<tr>
+		<th>Framerate</th>
+		<td><%= @profile.framerate %></td>
+		
+	</tr>
+	
+	<tr>
+		<th>Height</th>
+		<td><%= @profile.height %></td>
+		
+	</tr>
+		
+		
+	<tr>
+		<th>Width</th>
+		<td><%= @profile.width %></td>
+		
 	</tr>	
+	
+	<tr>
+		<th>Video Bitrate Mode</th>
+		<td><%= @profile.video_bitrate_mode %></td>
+		
+	</tr>
+	
+	
+	<tr>
+		<th>Mime Type</th>
+		<td><%= @profile.mime_type %></td>
+		
+	</tr>
 
 </table>
 
