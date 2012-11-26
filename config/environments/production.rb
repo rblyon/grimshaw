@@ -68,7 +68,7 @@ Grim1::Application.configure do
   #un-comment to add basic authentication
   
   config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Production") do |u, p|
-      [u, p] == ['podprofiles', 'n0rthant5']
+      [u, p] == ['podprofiles', 'n0rthants']
   end
   
   
