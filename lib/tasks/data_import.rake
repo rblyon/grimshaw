@@ -4,7 +4,7 @@ namespace :db do
     
     require 'csv'    
 
-    csv_text = File.read('/usr/local/heroku/profilestidy.csv')
+    csv_text = File.read('app/lib/tasks/profilestidy.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
       row = row.to_hash.with_indifferent_access
