@@ -66,9 +66,10 @@ Grim1::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   #un-comment to add basic authentication
-#config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Production") do |u, p|
- #     [u, p] == ['podprofiles', 'n0rthant5']
-  #  end
+  
+  config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Production") do |u, p|
+      [u, p] == ['podprofiles', 'n0rthant5']
+  end
   
   
 end
