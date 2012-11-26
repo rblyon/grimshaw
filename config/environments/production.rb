@@ -65,9 +65,10 @@ Grim1::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
-  config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Production") do |u, p|
-      [u, p] == ['podprofiles', 'n0rthant5']
-    end
+  #un-comment to add basic authentication
+#config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Production") do |u, p|
+ #     [u, p] == ['podprofiles', 'n0rthant5']
+  #  end
   
   
 end
