@@ -1,3 +1,3 @@
 # GRIMSHAW
 
-Currently Simple Search for Single Model
+Multilpe Field Search across multiplpe columns is a Single Model
