@@ -7,8 +7,15 @@
 	<%= label_tag("Bitrates higher than:")%>
     <%= text_field_tag :bitratelow, params[:bitratelow] %>
 	<%= label_tag("Bitrates lower than:")%>
-    <%= text_field_tag :bitratehigh, params[:bitratehigh] %>		
+    <%= text_field_tag :bitratehigh, params[:bitratehigh] %>
+	
+	<br>
+	<%= label_tag("Filter by:")%>	
+	Video: <%= radio_button_tag(:asset_type, "audio_video") %>
+	&nbsp Audio: <%= radio_button_tag(:asset_type, "audio") %>
+	&nbsp Captions: <%= radio_button_tag(:asset_type, "captions") %>
+	<br>		
 	<br>
 	<%= submit_tag("Search")%>
 <% end %>
-</form>	
+</form>		

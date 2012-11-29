@@ -33,17 +33,30 @@ class Profile < ActiveRecord::Base
     
     if search
       qry_a = []
-      search.select{|k,v| v!='' && !(%w(utf8 commit controller action bitratelow bitratehigh).include?(k))}.each_pair do |key,value|
-        qry_a << "#{key} like '%#{value}%'"
+      search.select{|k,v| v!='' && !(%w(utf8 commit controller action bitratelow bitratehigh asset_type).include?(k))}.each_pair do |key,value|
+       
+   
+       
+        qry_a << "#{key} like '%#{value}%'"       
+       
+       
       end  
+      
       if (search[:bitratelow] && search[:bitratelow]!='') || (search[:bitratehigh] && search[:bitratehigh]!='')
         qry_a <<"bitrate between #{search[:bitratelow]!='' ? search[:bitratelow]: 0} and #{search[:bitratehigh]!='' ? search[:bitratehigh]: 1000000000}"
       end  
+      
+      
+      if (search[:asset_type]) 
+        qry_a <<"asset_type = '#{search[:asset_type]}'"
+      end  
+        
+      
       qry = qry_a.join(' and ')
       Rails.logger.info qry
-      find(:all, :conditions => qry)   
+      find(:all, :conditions => qry, :order => "name ASC") 
     else
-      find(:all)
+      find(:all, :order => "name ASC")
     end
   end
 
